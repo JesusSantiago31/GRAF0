@@ -8,27 +8,37 @@
 </head>
 <body>
 
-  <h2>Algoritmo de Dijkstra</h2>
+  <h1>Algoritmo de Dijkstra</h1>
   <div class="todo">
-    <div class="form">
-      <div class="container">
-    <div class="card">
-      <h4>Eliminar Grafo</h4>
-      <div class="form-group">
-        <button onclick="deleteGraph()">Eliminar Todo</button>
-      </div>
-    </div>
-    
+
+    <div class="vis">
       <div class="card">
-      <h4>Agregar Nodo</h4>
-      <div class="form-group">
-        <input type="text" id="nodeName" placeholder="Nombre del nodo">
-        <button onclick="addNode()">Agregar Nodo</button>
+        <h4>Visualización del Grafo</h4>
+        <div id="network"></div>
+      </div>
+      <hr>
+            <div class="card">
+        <h4>Eliminar Grafo</h4>
+        <div class="form-group">
+          <button onclick="deleteGraph()">Eliminar Grafo</button>
+        </div>
       </div>
       </div>
 
+    <div class="form">
+      <div class="container">
+    
+    
       <div class="card">
-      <h4>Agregar Arista</h4>
+      <h4>Nuevo Nodo</h4>
+      <div class="form-group form-row">
+        <input type="text" id="nodeName" placeholder="Nombre del nuevo nodo (Ej: 1)">
+        <button onclick="addNode()">Agregar Nodo</button>
+      </div>
+      </div>
+<hr>
+      <div class="card">
+      <h4>Nueva Arista</h4>
       <div class="form-group form-row">
         <input type="text" id="srcNode" placeholder="Nodo origen">
         <input type="text" id="dstNode" placeholder="Nodo destino">
@@ -36,12 +46,13 @@
       </div>
       <button onclick="addEdge()">Agregar Arista</button>
       </div>
-
+<hr>
       <div class="card">
+        <hr>
       <h4>Algoritmo de Dijkstra</h4>
-      <div class="form-group">
+      <div class="form-group form-row">
         <input type="text" id="startNode" placeholder="Nodo inicial">
-        <input type="text" id="endNode" placeholder="Nodo destino (opcional)">
+        <input type="text" id="endNode" placeholder="Nodo destino ">
         <button onclick="runDijkstra()">Ejecutar</button>
       </div>
       <pre id="result"></pre>
@@ -49,12 +60,7 @@
   </div>
     </div>
 
-  <div class="vis">
-    <div class="card">
-      <h4>Visualización del Grafo</h4>
-      <div id="network"></div>
-    </div>
-    </div>
+  
   </div>
 
 
@@ -166,14 +172,14 @@
       nodes.forEach(node => {
         nodes.update({ 
           id: node.id, 
-          color: { background: "#bbdefb", border: "#0a2b5c" } 
+          color: { background: "#fbf5bb;", border: "#5c3f0a" } 
         });
       });
 
       edges.forEach(edge => {
         edges.update({ 
           id: edge.id, 
-          color: { color: "#90caf9" }, 
+          color: { color: "#f9e690" }, 
           width: 1 
         });
       });
@@ -182,7 +188,7 @@
       path.forEach(nodeId => {
         nodes.update({ 
           id: nodeId, 
-          color: { background: "#64b5f6", border: "#0d47a1" } 
+          color: { background: "#f6d464", border: "#a18b0d" } 
         });
       });
 
@@ -197,7 +203,7 @@
         if (edgeToHighlight) {
           edges.update({
             id: edgeToHighlight.id,
-            color: { color: "#0d47a1" },
+            color: { color: "#a1660d" },
             width: 3
           });
         }

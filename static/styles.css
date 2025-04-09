@@ -14,8 +14,9 @@ background-repeat: no-repeat;   /* Evita que la imagen se repita */
   color: #8C3420;
 }
 
-h2 {
+h1 {
   text-align: center;
+  
   color: #9e4b44;
 }
 
@@ -49,9 +50,9 @@ input[type="number"] {
 }
 
 button {
-  background-color: #8c6620;
+  background-color: #996d1a57;
   color: white;
-  border: none;
+  border-color: #867c67c7;
   padding: 10px 16px;
   margin-top: 10px;
   border-radius: 6px;
@@ -60,7 +61,7 @@ button {
 }
 
 button:hover {
-  background-color: #ba882a;
+  background-color: #ba882a98;
 }
 
 #result {
@@ -136,6 +137,9 @@ td {
   padding: 1rem;
   box-sizing: border-box;
   overflow-y: auto;
+  padding-top: 4.2%;
+  padding-right: 8%;
+  
 }
 
 .vis {
@@ -145,4 +149,18 @@ td {
   overflow-y: auto;
   padding-left: 5%;
   padding-right: 5%;
+  padding-top: 4%;
+}
+
+/* Comportamiento responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .todo {
+    flex-direction: column;
+  }
+
+  .form,
+  .vis {
+    width: 100%;
+    height: 50vh; /* opcional: ajustar según lo que quieras mostrar */
+  }
 }
