@@ -9,8 +9,9 @@
 <body>
 
   <h2>Algoritmo de Dijkstra</h2>
-  
-  <div class="container">
+  <div class="todo">
+    <div class="form">
+      <div class="container">
     <div class="card">
       <h4>Eliminar Grafo</h4>
       <div class="form-group">
@@ -18,15 +19,15 @@
       </div>
     </div>
     
-    <div class="card">
+      <div class="card">
       <h4>Agregar Nodo</h4>
       <div class="form-group">
         <input type="text" id="nodeName" placeholder="Nombre del nodo">
         <button onclick="addNode()">Agregar Nodo</button>
       </div>
-    </div>
+      </div>
 
-    <div class="card">
+      <div class="card">
       <h4>Agregar Arista</h4>
       <div class="form-group form-row">
         <input type="text" id="srcNode" placeholder="Nodo origen">
@@ -34,9 +35,9 @@
         <input type="number" id="edgeWeight" placeholder="Peso">
       </div>
       <button onclick="addEdge()">Agregar Arista</button>
-    </div>
+      </div>
 
-    <div class="card">
+      <div class="card">
       <h4>Algoritmo de Dijkstra</h4>
       <div class="form-group">
         <input type="text" id="startNode" placeholder="Nodo inicial">
@@ -44,13 +45,18 @@
         <button onclick="runDijkstra()">Ejecutar</button>
       </div>
       <pre id="result"></pre>
+      </div>
+  </div>
     </div>
 
+  <div class="vis">
     <div class="card">
       <h4>Visualización del Grafo</h4>
       <div id="network"></div>
     </div>
+    </div>
   </div>
+
 
   <script>
     let nodes = new vis.DataSet();
